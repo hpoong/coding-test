@@ -1,6 +1,7 @@
 package 소수_찾기;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Solution_01 {
 
@@ -12,11 +13,36 @@ public class Solution_01 {
         recursive("", numbers);
         System.out.println(numberSet);
 
+        int count = 0;
 
         // 2. 소수의 개수만  센다
+        Iterator<Integer> it = numberSet.iterator();
+
+        while (it.hasNext()) { // hasNext
+            int num = it.next();
+            if(isPrime(num))
+                count ++;
+        }
+
+
         // 3. 소수의 개수를 반환한다.
-        int answer = 0;
-        return answer;
+        return count;
+    }
+
+    public boolean isPrime(int num) {
+        // 0과 1인 소수가 아니다.
+        if(num == 0 || num == 1)
+            return false;
+
+        // 에라토스테네스의 체의 limit 계산한다.
+        int lim = (int)Math.sqrt(num);
+
+        // 에라토스테네스의 페에 따라 limit 까지만 배수 여부를 확인
+        for(int i=2; i<=lim; i++) {
+            if(num % i == 0) return false;
+        }
+
+        return true;
     }
 
     public void recursive(String comb, String others) {
@@ -32,6 +58,6 @@ public class Solution_01 {
 
     public static void main(String[] args) {
         Solution_01 solution01 = new Solution_01();
-        System.out.println(solution01.solution("5157"));
+        System.out.println(solution01.solution("17"));
     }
 }
