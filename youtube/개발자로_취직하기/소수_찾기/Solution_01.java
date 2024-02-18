@@ -1,4 +1,4 @@
-package 소수_찾기;
+package 개발자로_취직하기.소수_찾기;
 
 import java.util.HashSet;
 import java.util.Iterator;

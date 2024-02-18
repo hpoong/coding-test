@@ -1,4 +1,4 @@
-package 위장;
+package 개발자로_취직하기.위장;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package 신규아이디추천;
+package 개발자로_취직하기.신규아이디추천;
 
 public class Solution_01 {
 

@@ -1,20 +1,16 @@
-package 전화번호_목록;
+package 개발자로_취직하기.전화번호_목록;
 
 import java.util.Arrays;
 
-public class Solution_02 {
+public class Solution_01 {
 
     public static boolean solution(String[] phone_book) {
-       // phone_book 정렬한다.
         Arrays.sort(phone_book);
-
-        // 1중 loop를 돌면서 앞번호의 접두어인지 확인
-        for(int i=0; i<phone_book.length-1; i++) {
+        for(int i=0; i<phone_book.length; i++) {
+            if(i+1 == phone_book.length) break; // TODO: 여기 개선사항
             if(phone_book[i+1].startsWith(phone_book[i]))
                 return false;
         }
-
-        // 여기까지 오지 못했다면 접두어가 없다는것.
         return true;
     }
 
