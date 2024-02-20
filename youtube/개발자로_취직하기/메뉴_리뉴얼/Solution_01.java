@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Solution_01 {
 
-    List<String> anws
+//    List<String> anws
 
     public String[] solution(String[] orders, int[] course) {
 
