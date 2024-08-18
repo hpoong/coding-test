@@ -30,19 +30,16 @@ public class Solution {
         String[] cards1_1 = {"i", "drink", "water"};
         String[] cards1_2 = {"want", "to"};
         String[] goal1 = {"i", "want", "to", "drink", "water"};
+        String result1 = solution(cards1_1, cards1_2, goal1);
+        System.out.println("result : " + result1); // "Yes"
+
 
         // 두 번째 테스트 케이스
         String[] cards2_1 = {"i", "water", "drink"};
         String[] cards2_2 = {"want", "to"};
         String[] goal2 = {"i", "want", "to", "drink", "water"};
-
-        // 첫 번째 테스트 케이스 실행
-        String result1 = solution(cards1_1, cards1_2, goal1);
-        System.out.println("첫 번째 테스트 결과: " + result1); // 예상 출력: "Yes"
-
-        // 두 번째 테스트 케이스 실행
         String result2 = solution(cards2_1, cards2_2, goal2);
-        System.out.println("두 번째 테스트 결과: " + result2); // 예상 출력: "No"
+        System.out.println("result: " + result2); // "No"
     }
 
 
